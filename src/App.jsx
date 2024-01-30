@@ -27,8 +27,8 @@ function App() {
       <Header></Header>
       <Button></Button>
       <UserGreeting isLoggedIn={true} ></UserGreeting>
-      <List items={fruits} category="Fruits" ></List>
-      <List items={vegetables} category="Vegetables" ></List>
+      {fruits.length > 0 ? <List items={fruits} category="Fruits" ></List> : null}
+      {vegetables.length > 0 ?  <List items={vegetables} category="Vegetables" ></List> : null}
       <Student name ="Spongebob" age={30} isStudent={true}></Student>
       <Student name="Patrick" age={42} isStudent={false}></Student>
       <Student name="Squidward" age={50} isStudent={false}></Student>
