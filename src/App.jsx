@@ -9,12 +9,26 @@ import List from "./List.jsx"
 
 
 function App() {
+
+  const fruits = [{id: 1, name: "apple" , calories: 95 },
+  {id: 2, name: "orange", calories: 195},
+  {id: 3, name: "Mango", calories: 165},
+  {id: 4, name: "Coconut", calories: 35},
+  {id: 5, name: "Grapes", calories: 75}];
+
+  const vegetables = [{id: 6, name: "Potatoes" , calories: 115 },
+  {id: 7, name: "Celery", calories: 19},
+  {id: 8, name: "Carrots", calories: 85},
+  {id: 9, name: "Corn", calories: 65},
+  {id: 10, name: "Broccoli", calories: 50}];
+
   return(
     <>
       <Header></Header>
       <Button></Button>
       <UserGreeting isLoggedIn={true} ></UserGreeting>
-      <List></List>
+      <List items={fruits} category="Fruits" ></List>
+      <List items={vegetables} category="Vegetables" ></List>
       <Student name ="Spongebob" age={30} isStudent={true}></Student>
       <Student name="Patrick" age={42} isStudent={false}></Student>
       <Student name="Squidward" age={50} isStudent={false}></Student>

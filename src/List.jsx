@@ -1,9 +1,14 @@
-function List() {
-  const fruits = [{id: 1, name: "apple" , calories: 95 },
-                  {id: 2, name: "orange", calories: 195},
-                  {id: 3, name: "Mango", calories: 165},
-                  {id: 4, name: "Coconut", calories: 35},
-                  {id: 5, name: "Grapes", calories: 75}];
+function List(props) {
+
+  const category = props.category;
+  const itemList = props.items;
+
+
+  // const fruits = [{id: 1, name: "apple" , calories: 95 },
+  //                 {id: 2, name: "orange", calories: 195},
+  //                 {id: 3, name: "Mango", calories: 165},
+  //                 {id: 4, name: "Coconut", calories: 35},
+  //                 {id: 5, name: "Grapes", calories: 75}];
 
   // fruits.sort((a, b) => a.name.localeCompare(b.name)); //alphabetical
   // fruits.sort((a, b) => b.name.localeCompare(a.name)); //reverse alphabetical
@@ -21,11 +26,14 @@ function List() {
 //   <b>{highCalFruit.calories}</b>
 //   </li>);
 
-const listItems = fruits.map(fruit => <li key={fruit.id}>{fruit.name}: &nbsp;
-  <b>{fruit.calories}</b>
+const listItems = itemList.map(item => <li key={item.id}>{item.name}: &nbsp;
+  <b>{item.calories}</b>
   </li>);
 
-  return (<ol>{listItems}</ol>);
+  return (<>
+            <h3 className="list-category">{category}</h3>
+            <ol className="list-items">{listItems}</ol>
+          </>);
 
 }
 
