@@ -2,10 +2,11 @@ import Header from "./Header.jsx"
 import Footer from "./Footer.jsx"
 import Food from "./Food.jsx";
 import Card from "./Card.jsx";
-import Button from "./Button/Button.jsx"
+import Btn from "./Btn/Btn.jsx"
 import Student from "./Student.jsx"
 import UserGreeting from "./UserGreeting.jsx";
 import List from "./List.jsx"
+import Button from "./Button.jsx"
 
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
   return(
     <>
       <Header></Header>
-      <Button></Button>
+      <Btn></Btn>
+      <Button/>
       <UserGreeting isLoggedIn={true} ></UserGreeting>
       {fruits.length > 0 ? <List items={fruits} category="Fruits" ></List> : null}
       {vegetables.length > 0 ?  <List items={vegetables} category="Vegetables" ></List> : null}
