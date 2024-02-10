@@ -11,6 +11,7 @@ import ProfilePicture from "./ProfilePicture.jsx";
 import MyComponent from "./MyComponent.jsx";
 import { Component } from "react";
 import Counter from "./Counter.jsx";
+import MoreComponent from "./MoreComponent.jsx";
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
     <>
       <Header></Header>
       <Counter/>
+      <MoreComponent/>
       <MyComponent/>
       <ProfilePicture/>
       <Btn></Btn>
