@@ -9,7 +9,7 @@ import List from "./List.jsx"
 import Button from "./Button.jsx"
 import ProfilePicture from "./ProfilePicture.jsx";
 import MyComponent from "./MyComponent.jsx";
-import { MyComponent } from "react";
+import { Component } from "react";
 
 function App() {
 
