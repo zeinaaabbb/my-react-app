@@ -8,7 +8,8 @@ import UserGreeting from "./UserGreeting.jsx";
 import List from "./List.jsx"
 import Button from "./Button.jsx"
 import ProfilePicture from "./ProfilePicture.jsx";
-
+import MyComponent from "./MyComponent.jsx";
+import { MyComponent } from "react";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
   return(
     <>
       <Header></Header>
+      <MyComponent/>
       <ProfilePicture/>
       <Btn></Btn>
       <Button/>
