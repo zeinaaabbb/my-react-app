@@ -1,7 +1,9 @@
 function ProfilePicture(){
   const imageUrl =  './src/assets/profile.jpg';
 
-  return(<img src={imageUrl}></img>);
+  const handleClick = (e) => console.log('clicked');
+
+  return(<img onClick={handleClick} src={imageUrl}></img>);
 }
 
 export default ProfilePicture
