@@ -13,6 +13,7 @@ import { Component } from "react";
 import Counter from "./Counter.jsx";
 import MoreComponent from "./MoreComponent.jsx";
 import OtherComponent from "./OtherComponent.jsx";
+import FoodComponent from "./FoodComponent.jsx";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
     <>
       <Header></Header>
       <Counter/>
+      <FoodComponent/>
       <OtherComponent/><br/>
       <MoreComponent/>
       <MyComponent/>
