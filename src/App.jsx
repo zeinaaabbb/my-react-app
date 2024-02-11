@@ -14,6 +14,7 @@ import Counter from "./Counter.jsx";
 import MoreComponent from "./MoreComponent.jsx";
 import OtherComponent from "./OtherComponent.jsx";
 import FoodComponent from "./FoodComponent.jsx";
+import CarComponent from "./CarComponent.jsx";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
     <>
       <Header></Header>
       <Counter/>
+      <CarComponent/>
       <FoodComponent/>
       <OtherComponent/><br/>
       <MoreComponent/>
