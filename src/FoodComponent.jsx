@@ -14,15 +14,18 @@ function FoodComponent(){
 
   }
 
-  const handleRemoveFood = () => {
-
+  const handleRemoveFood = (index) => {
+    setFoods(foods.filter((_, i) => i !==index));
   }
 
   return(<>
     <div>
       <h2>List of Food</h2>
       <ul>
-        {foods.map((food, index) => <li key={index}>{food}</li>)}
+        {foods.map((food, index) =>
+        <li key={index} onClick={() => handleRemoveFood(index)}>
+          {food}
+        </li>)}
       </ul>
       <input type="text" placeholder="Add Food name" id="foodInput"/>
       <button onClick={handleAddFood}>Enter Food</button>
