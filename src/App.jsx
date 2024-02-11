@@ -12,6 +12,7 @@ import MyComponent from "./MyComponent.jsx";
 import { Component } from "react";
 import Counter from "./Counter.jsx";
 import MoreComponent from "./MoreComponent.jsx";
+import OtherComponent from "./OtherComponent.jsx";
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
     <>
       <Header></Header>
       <Counter/>
+      <OtherComponent/><br/>
       <MoreComponent/>
       <MyComponent/>
       <ProfilePicture/>
