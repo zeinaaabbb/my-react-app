@@ -10,41 +10,44 @@ function CarComponent() {
   const [carMake, setCarMake] = useState("");
   const [carModel, setCarModel] = useState("");
 
+
    // Define the function to handle adding a new car
   const handleAddCar = () => {
-
     // Create a new car object with current state values
     const newCar = {year: carYear, make: carMake, model: carModel};
-
     // Update the cars state with the new car object
     setCars(c => [...cars, newCar]);
+    // Reset carYear, carMake, and carModel after adding a new car
+    setCarYear(new Date().getFullYear());
+    setCarMake("");
+    setCarModel("");
 
-  }
+  };
 
    // Define the function to handle removing a car by index
   const handleRemoveCar = (index) => {
       // Update the cars state by filtering out the car at the specified index
     setCars(cars.filter((_, i) => i!==index));
-  }
+  };
 
    // Define the function to handle changing the car year
   const handleYearChange = (e) => {
      // Update the carYear state with the new value from the input
     setCarYear(e.target.value);
-  }
+  };
 
    // Define the function to handle changing the car make
   const handleMakeChange = (e) => {
     // Update the carMake state with the new value from the input
     setCarMake(e.target.value);
 
-  }
+  };
 
   // Define the function to handle changing the car model
   const handleModelChange = (e) => {
      // Update the carModel state with the new value from the input
     setCarModel(e.target.value);
-  }
+  };
 
    // Render the component with JSX
   return(<>
